@@ -14,9 +14,6 @@ const WARM_SHADOW = "#e2c59d"; // Subtle Shadow Color
 // Utility class names derived from custom colors for consistency
 const TEXT_PRIMARY = `text-[${EARTH_BROWN}]`;
 const BG_ACCENT = `bg-[${SUNFLOWER_ACCENT}]`;
-const TEXT_ACCENT = `text-[${SUNFLOWER_ACCENT}]`;
-const BORDER_ACCENT = `border-[${SUNFLOWER_ACCENT}]`;
-const BG_NEUTRAL = `bg-[${CREAM_NEUTRAL}]`;
 const TEXT_GROWTH = `text-[${LUSH_GREEN}]`;
 const BG_GROWTH = `bg-[${LUSH_GREEN}]`;
 
@@ -776,7 +773,7 @@ export const App: React.FC = () => {
             rows={2}
             style={{
               borderColor: CREAM_NEUTRAL,
-              focusBorderColor: SUNFLOWER_ACCENT,
+              borderColor: SUNFLOWER_ACCENT,
               color: EARTH_BROWN,
             }}
           ></textarea>
@@ -793,7 +790,7 @@ export const App: React.FC = () => {
             rows={2}
             style={{
               borderColor: CREAM_NEUTRAL,
-              focusBorderColor: SUNFLOWER_ACCENT,
+              borderColor: SUNFLOWER_ACCENT,
               color: EARTH_BROWN,
             }}
           ></textarea>
@@ -968,7 +965,7 @@ export const App: React.FC = () => {
           placeholder="E.g., How can we handle stress better as a team? Or, give us a fun prompt."
           style={{
             borderColor: CREAM_NEUTRAL,
-            focusBorderColor: SUNFLOWER_ACCENT,
+            borderColor: SUNFLOWER_ACCENT,
             color: EARTH_BROWN,
           }}
           disabled={isCoachLoading}
@@ -1162,7 +1159,7 @@ export const App: React.FC = () => {
             }
             style={{
               borderColor: CREAM_NEUTRAL,
-              focusBorderColor: SUNFLOWER_ACCENT,
+              borderColor: SUNFLOWER_ACCENT,
               color: EARTH_BROWN,
             }}
           ></textarea>
@@ -1305,7 +1302,7 @@ export const App: React.FC = () => {
               rows={4}
               style={{
                 borderColor: CREAM_NEUTRAL,
-                focusBorderColor: SUNFLOWER_ACCENT,
+                borderColor: SUNFLOWER_ACCENT,
                 color: EARTH_BROWN,
               }}
               placeholder={`Your healing thoughts for Step ${repairStep}...`}
