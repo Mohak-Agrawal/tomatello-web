@@ -25,21 +25,22 @@ const ContactForm: React.FC = () => {
       setName("");
       setEmail("");
       setMessage("");
-      setTimeout(() => setStatus("idle"), 5000);
-    }, 1500);
+      setTimeout(() => setStatus("idle"), 4000);
+    }, 1200);
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="flex flex-col gap-6 p-0 bg-transparent border-0 shadow-none"
-    >
-      <h3 className="text-xl font-bold uppercase text-[#9c8978] tracking-wider mb-2 pb-2">
-        Send us a Message
+    <form onSubmit={handleSubmit} className="flex flex-col gap-10 max-w-md">
+      <h3 className="text-xs uppercase tracking-[0.45em] text-[#9c8978]">
+        Send a Message
       </h3>
 
-      <div className="flex flex-col">
-        <label htmlFor="name" className="text-sm font-medium mb-1">
+      {/* Name */}
+      <div className="flex flex-col gap-2">
+        <label
+          htmlFor="name"
+          className="text-xs uppercase tracking-widest text-neutral-500"
+        >
           Your Name
         </label>
         <input
@@ -48,12 +49,16 @@ const ContactForm: React.FC = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="p-3 bg-transparent border border-gray-300 focus:border-[#9c8978] focus:ring-0 text-base"
+          className="py-3 border-b border-neutral-300 bg-transparent focus:border-[#9c8978] outline-none transition-colors duration-300"
         />
       </div>
 
-      <div className="flex flex-col">
-        <label htmlFor="email" className="text-sm font-medium mb-1">
+      {/* Email */}
+      <div className="flex flex-col gap-2">
+        <label
+          htmlFor="email"
+          className="text-xs uppercase tracking-widest text-neutral-500"
+        >
           Email Address
         </label>
         <input
@@ -62,48 +67,47 @@ const ContactForm: React.FC = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="p-3 bg-transparent border border-gray-300 focus:border-[#9c8978] focus:ring-0 text-base"
+          className="py-3 border-b border-neutral-300 bg-transparent focus:border-[#9c8978] outline-none transition-colors duration-300"
         />
       </div>
 
-      <div className="flex flex-col">
-        <label htmlFor="message" className="text-sm font-medium mb-1">
+      {/* Message */}
+      <div className="flex flex-col gap-2">
+        <label
+          htmlFor="message"
+          className="text-xs uppercase tracking-widest text-neutral-500"
+        >
           Message
         </label>
         <textarea
           id="message"
-          rows={5}
+          rows={4}
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
-          className="p-3 bg-transparent border border-gray-300 focus:border-[#9c8978] focus:ring-0 text-base"
+          className="py-3 border-b border-neutral-300 bg-transparent focus:border-[#9c8978] outline-none transition-colors duration-300 resize-none"
         />
       </div>
 
+      {/* Button */}
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="
-          font-mono text-base font-medium 
-          bg-[#9c8978] text-[#252525] 
-          py-4 px-8 uppercase tracking-wider
-          hover:opacity-90 transition-all duration-200
-          disabled:bg-gray-400 disabled:cursor-not-allowed
-        "
+        className="self-start text-sm uppercase tracking-[0.3em] text-[#252525] border border-[#9c8978] px-8 py-3 hover:bg-[#9c8978] hover:text-white transition-all duration-300 disabled:opacity-50"
       >
-        {status === "submitting"
-          ? "Sending..."
-          : "Reserve Table / Send Inquiry"}
+        {status === "submitting" ? "Sending..." : "Reserve / Inquiry"}
       </button>
 
+      {/* Status Messages */}
       {status === "success" && (
-        <p className="text-center text-green-700 bg-green-100 p-3 text-sm">
-          Thank you! Your message has been received.
+        <p className="text-sm text-neutral-600 italic">
+          Thank you. We’ll be in touch shortly.
         </p>
       )}
+
       {status === "error" && (
-        <p className="text-center text-red-700 bg-red-100 p-3 text-sm">
-          Please fill out all fields correctly.
+        <p className="text-sm text-neutral-500 italic">
+          Please complete all fields.
         </p>
       )}
     </form>
