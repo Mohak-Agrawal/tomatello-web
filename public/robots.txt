@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap location (update the domain when deploying)
+Sitemap: https://tomatello.com/sitemap.xml

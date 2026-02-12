@@ -2,34 +2,19 @@ import { useState } from "react";
 import SectionHeader from "./SectionHeader";
 import MenuItemCard from "./MenuItemCard";
 import { MENU_CATEGORIES, MENU_ITEMS } from "../data/menuItems";
+import type { MenuItem } from "../types/menu";
 
 interface MenuSectionProps {
   addToCart: (item: MenuItem) => void;
+  cartQuantities: Record<number, number>;
+  updateQuantity: (itemId: number, change: 1 | -1) => void;
 }
 
-interface MenuItem {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  category:
-    | "Chef’s Table"
-    | "Soups"
-    | "Antipasti & Small Plates"
-    | "Neapolitan Pizza"
-    | "Signature Alla Pala Pizza"
-    | "Pastas"
-    | "Chef’s Signature Pasta & Risotti"
-    | "Mains"
-    | "Salads"
-    | "Sides"
-    | "Dessert";
-  isSignature: boolean;
-  isSoldOut: boolean;
-  imageUrl: string;
-}
-
-const MenuSection: React.FC<MenuSectionProps> = ({ addToCart }) => {
+const MenuSection: React.FC<MenuSectionProps> = ({
+  addToCart,
+  cartQuantities,
+  updateQuantity,
+}) => {
   const [filter, setFilter] = useState<string>("All");
 
   const filteredMenu = MENU_ITEMS.filter(
@@ -83,10 +68,19 @@ const MenuSection: React.FC<MenuSectionProps> = ({ addToCart }) => {
 
         {/* Menu Grid */}
         <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-10 lg:gap-x-16 w-full mt-10 md:mt-12">
-          {" "}
-          {filteredMenu.map((item) => (
-            <MenuItemCard key={item.id} item={item} addToCart={addToCart} />
-          ))}
+          {filteredMenu.map((item) => {
+            const quantity = cartQuantities[item.id] ?? 0;
+            return (
+              <MenuItemCard
+                key={item.id}
+                item={item as MenuItem}
+                quantity={quantity}
+                onAdd={() => addToCart(item as MenuItem)}
+                onIncrease={() => updateQuantity(item.id, 1)}
+                onDecrease={() => updateQuantity(item.id, -1)}
+              />
+            );
+          })}
         </ul>
 
         {filteredMenu.length === 0 && (

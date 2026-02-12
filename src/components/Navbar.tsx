@@ -29,10 +29,10 @@ const Navbar: React.FC<NavbarProps> = ({
   const navItems = [
     { id: "hero", label: "Home" },
     { id: "menu", label: "Menu" },
-    { id: "about", label: "About" },
+    { id: "about", label: "Our Chef" },
     { id: "testimonials", label: "Reviews" },
     // { id: "chefs", label: "Chefs" },
-    { id: "craft", label: "Craft" },
+    // { id: "craft", label: "Craft" },
     { id: "contact", label: "Contact" },
   ];
 
@@ -95,7 +95,44 @@ const Navbar: React.FC<NavbarProps> = ({
           </div>
           {/* RIGHT COLUMN */}
           <div className="flex items-center  justify-end gap-3 w-full">
-            {" "}
+            {/* Cart Button */}
+            <button
+              type="button"
+              onClick={toggleCart}
+              className={`
+                relative inline-flex items-center justify-center
+                px-3 py-1.5 rounded-full text-[10px] sm:text-xs uppercase tracking-[0.18em]
+                border transition-all duration-200
+                ${
+                  scrolled
+                    ? "bg-white text-[#252525] border-gray-200 hover:bg-gray-50"
+                    : "bg-black/20 text-white border-white/40 hover:bg-black/30"
+                }
+              `}
+              aria-label="Open cart"
+            >
+              <span className="hidden sm:inline mr-2">Cart</span>
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M3 3h2l.4 2M7 13h10l3-8H6.4M7 13L5.4 5M7 13l-2 8h14l-2-8M10 21a1 1 0 11-2 0 1 1 0 012 0zm10 0a1 1 0 11-2 0 1 1 0 012 0z"
+                ></path>
+              </svg>
+              {totalCartItems > 0 && (
+                <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] rounded-full bg-[#9c8978] text-white text-[10px] flex items-center justify-center px-1">
+                  {totalCartItems}
+                </span>
+              )}
+            </button>
+
             {/* Desktop CTA */}
             <a
               href="https://wa.me/918076823024?text=Hello%20Tomatello,%20I%20would%20like%20to%20place%20an%20order."

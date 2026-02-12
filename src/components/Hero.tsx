@@ -7,11 +7,16 @@ import Hero from "../assets/hero.png";
 const HeroSection: React.FC<HeroSectionProps> = ({ scrollTo }) => (
   <section
     id="hero"
+    aria-labelledby="hero-heading"
     className="
       relative w-full min-h-[80vh] md:min-h-[100vh]
       overflow-hidden
     "
   >
+    {/* SEO: Main heading for the page (visually hidden, present for crawlers) */}
+    <h1 id="hero-heading" className="sr-only">
+      Tomatello Ristorante — Authentic Italian Restaurant
+    </h1>
     {/* Background Image */}
     <div
       className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"

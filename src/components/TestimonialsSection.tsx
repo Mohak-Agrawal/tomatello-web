@@ -144,7 +144,7 @@ const TestimonialsSection: React.FC = () => {
   return (
     <section
       id="testimonials"
-      className="py-24 md:py-28 lg:py-32 overflow-hidden"
+      className="py-24 md:py-28 lg:py-36 overflow-hidden"
     >
       <div className="max-w-5xl mx-auto px-4 relative">
         <SectionHeader

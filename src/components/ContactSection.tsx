@@ -5,8 +5,8 @@ const ContactSection: React.FC = () => (
   <section id="contact" className="py-32 bg-[#f7f5f1]">
     <div className="max-w-6xl mx-auto px-6">
       <SectionHeader
-        title="Visit Us or Say Ciao"
-        subtitle="Open daily for lunch and dinner."
+        title="Private Dining & At-Home Experiences"
+        subtitle="Curated private dinners and chef-led gatherings, thoughtfully prepared for intimate occasions. Leave us a message and our team will connect to design your experience."
       />
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-24 mt-20">

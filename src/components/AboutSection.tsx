@@ -2,54 +2,51 @@ import SectionHeader from "./SectionHeader";
 import Chef from "../assets/chef.png";
 
 const AboutSection: React.FC = () => (
-  <section id="about" className="py-28 lg:py-36 bg-[#f7f5f1] relative">
-    {" "}
+  <section id="about" className="py-32 lg:py-40 bg-[#f7f5f1] relative">
     <div className="max-w-6xl mx-auto px-6">
       <SectionHeader
         title="Our Story & Philosophy"
         subtitle="Where Italian heritage meets modern craftsmanship."
       />
 
-      <div className="mt-12 md:mt-16 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-14 items-center">
+      <div className="mt-20 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-20 items-center">
         {/* IMAGE LEFT */}
         <div className="w-full">
-          <div className="overflow-hidden rounded-3xl shadow-lg">
+          <div className="overflow-hidden rounded-2xl">
             <img
               src={Chef}
-              alt="Tomatello Italian dining"
-              className="w-full h-[360px] sm:h-[480px] lg:h-[680px] object-cover"
+              alt="Chef Davide D’Ignazio"
+              className="w-full h-[380px] sm:h-[500px] lg:h-[700px] object-cover"
             />
           </div>
         </div>
 
         {/* TEXT RIGHT */}
-        {/* TEXT RIGHT */}
-        <div className="space-y-8 max-w-md">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[#d4a536] font-medium mb-[-16px]">
-              Chef
-            </p>
-          </div>
+        <div className="space-y-10 max-w-sm">
+          <p className="text-[12px] uppercase tracking-[0.5em] text-neutral-400 mb-[-18px]">
+            CHEF
+          </p>
 
-          <h3 className="text-4xl lg:text-5xl font-light tracking-tight text-neutral-900">
+          <h3 className="text-4xl lg:text-5xl font-light text-neutral-900 leading-tight">
             Davide D’Ignazio
           </h3>
 
-          <p className="text-neutral-600 leading-relaxed text-[17px]">
-            With more than two decades of international experience — including
-            leadership in a Michelin-starred kitchen in Rome — Chef Davide
-            brings quiet precision and depth to Tomatello.
-          </p>
+          <div className="space-y-6">
+            <p className="text-[16px] text-neutral-600 leading-relaxed font-light">
+              With more than two decades of international experience — including
+              leading a Michelin-starred kitchen in Rome — Chef Davide brings
+              quiet precision and depth to Tomatello.
+            </p>
 
-          <p className="text-neutral-600 leading-relaxed text-[17px]">
-            For him, this kitchen is a return to authentic Italian roots: fewer
-            ingredients, stronger character, and absolute respect for craft.
-            Each dish is guided by balance, seasonality, and intention.
-          </p>
+            <p className="text-[16px] text-neutral-600 leading-relaxed font-light">
+              For him, this kitchen is a return to authentic Italian roots:
+              fewer ingredients, stronger character, and absolute respect for
+              craft. Each dish is guided by balance, seasonality, and intention.
+            </p>
+          </div>
 
-          <div className="pt-10 border-l border-[#d4a536]/30 pl-8">
-            {" "}
-            <p className="italic text-neutral-500 text-lg leading-relaxed">
+          <div className="pt-8 border-l border-neutral-300 pl-6">
+            <p className="italic text-neutral-500 text-[17px] leading-relaxed font-light">
               “Simplicity is the highest form of refinement. Let the ingredients
               speak.”
             </p>
