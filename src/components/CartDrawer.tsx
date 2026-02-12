@@ -52,7 +52,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
       </div>
 
       <div className="flex items-center space-x-4 pl-4">
-        <span className="font-bold text-sm text-[#edc84b]">
+        <span className="font-bold text-sm text-[#9c8978]">
           ₹{(item.price * item.quantity).toFixed(2)}
         </span>
         {/* Remove Item */}
@@ -95,7 +95,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
       {/* Drawer Container (Flat) */}
       <div
         className={`fixed top-0 right-0 h-full      w-full sm:w-[440px] md:w-[480px]  bg-[#f7f2e9] shadow-2xl z-50 
-                      transform transition-transform duration-500 ease-in-out border-l-4 border-[#edc84b]
+                      transform transition-transform duration-500 ease-in-out border-l-4 border-[#9c8978]
                       ${isCartOpen ? "translate-x-0" : "translate-x-full"}
                   `}
         role="dialog"
@@ -109,7 +109,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
           </h2>
           <button
             onClick={toggleCart}
-            className="text-gray-500 hover:text-[#edc84b] transition-colors duration-200 p-1"
+            className="text-gray-500 hover:text-[#9c8978] transition-colors duration-200 p-1"
             aria-label="Close cart"
           >
             {/* SVG for close */}
@@ -156,9 +156,9 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
             <span className="font-light">Tax (10%):</span>
             <span className="font-medium">₹{tax.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between text-xl font-bold border-t-2 border-[#edc84b] pt-3 mt-3">
+          <div className="flex justify-between text-xl font-bold border-t-2 border-[#9c8978] pt-3 mt-3">
             <span className="uppercase tracking-wider">Total:</span>
-            <span className="text-[#edc84b]">₹{total.toFixed(2)}</span>
+            <span className="text-[#9c8978]">₹{total.toFixed(2)}</span>
           </div>
 
           <button
@@ -171,7 +171,7 @@ const CartDrawer: React.FC<CartDrawerProps> = ({
                               flat-button font-mono text-base font-bold mt-6
                               bg-[#252525] text-white 
                               py-4 px-8 uppercase tracking-wider w-full
-                              border-2 border-transparent hover:border-[#edc84b] transition-all duration-200
+                              border-2 border-transparent hover:border-[#9c8978] transition-all duration-200
                               disabled:bg-gray-400 disabled:cursor-not-allowed
                           "
           >

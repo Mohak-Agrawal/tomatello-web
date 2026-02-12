@@ -2,14 +2,14 @@ import ContactForm from "./ContactForm";
 import SectionHeader from "./SectionHeader";
 
 const ContactSection: React.FC = () => (
-  <section id="contact" className="p-8 bg-white">
-    <div className="max-w-7xl mx-auto px-4">
+  <section id="contact" className="py-16 md:py-20 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <SectionHeader
         title="Visit Us or Say Ciao!"
         subtitle="We are open daily for lunch and dinner. Find us here or get in touch."
       />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 mt-10 md:mt-12">
         {/* Contact Form */}
         <ContactForm />
 

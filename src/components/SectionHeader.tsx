@@ -1,12 +1,19 @@
-const SectionHeader: React.FC<{ title: string; subtitle: string }> = ({
-  title,
-  subtitle,
-}) => (
-  <div className="section-header flex flex-col items-center gap-4 text-center pb-8">
-    <h2>{title}</h2>
-    <p className="text-base italic font-light text-gray-600 max-w-lg">
-      {subtitle}
-    </p>
+interface SectionHeaderProps {
+  title: string;
+  subtitle?: string;
+}
+
+const SectionHeader: React.FC<SectionHeaderProps> = ({ title, subtitle }) => (
+  <div className="flex flex-col items-center text-center mb-10">
+    <h2 className="text-xl tracking-[0.2em] uppercase tracking-wide text-[#252525]">
+      {title}
+    </h2>
+
+    {subtitle && (
+      <p className="mt-4 text-sm text-gray-400 italic max-w-md leading-relaxed">
+        {subtitle}
+      </p>
+    )}
   </div>
 );
 

@@ -34,7 +34,7 @@ const ContactForm: React.FC = () => {
       onSubmit={handleSubmit}
       className="flex flex-col gap-6 p-0 bg-transparent border-0 shadow-none"
     >
-      <h3 className="text-xl font-bold uppercase text-[#edc84b] tracking-wider mb-2 pb-2">
+      <h3 className="text-xl font-bold uppercase text-[#9c8978] tracking-wider mb-2 pb-2">
         Send us a Message
       </h3>
 
@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="p-3 bg-transparent border border-gray-300 focus:border-[#edc84b] focus:ring-0 text-base"
+          className="p-3 bg-transparent border border-gray-300 focus:border-[#9c8978] focus:ring-0 text-base"
         />
       </div>
 
@@ -62,7 +62,7 @@ const ContactForm: React.FC = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="p-3 bg-transparent border border-gray-300 focus:border-[#edc84b] focus:ring-0 text-base"
+          className="p-3 bg-transparent border border-gray-300 focus:border-[#9c8978] focus:ring-0 text-base"
         />
       </div>
 
@@ -76,7 +76,7 @@ const ContactForm: React.FC = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           required
-          className="p-3 bg-transparent border border-gray-300 focus:border-[#edc84b] focus:ring-0 text-base"
+          className="p-3 bg-transparent border border-gray-300 focus:border-[#9c8978] focus:ring-0 text-base"
         />
       </div>
 
@@ -85,7 +85,7 @@ const ContactForm: React.FC = () => {
         disabled={status === "submitting"}
         className="
           font-mono text-base font-medium 
-          bg-[#edc84b] text-[#252525] 
+          bg-[#9c8978] text-[#252525] 
           py-4 px-8 uppercase tracking-wider
           hover:opacity-90 transition-all duration-200
           disabled:bg-gray-400 disabled:cursor-not-allowed

@@ -16,7 +16,7 @@ const CHEFS_DATA: Chef[] = [
     title: "Executive Chef",
     specialty: "Northern Italian Pasta",
     bio: "Hailing from Bologna, Chef Rossi brings over 30 years of expertise in classic Italian cooking, focusing on handmade pasta techniques.",
-    imageUrl: "https://placehold.co/200x200/edc84b/252525?text=ROSSI",
+    imageUrl: "https://placehold.co/200x200/9c8978/252525?text=ROSSI",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const CHEFS_DATA: Chef[] = [
     title: "Head Baker & Pizzaiola",
     specialty: "Neapolitan Pizza & Bread",
     bio: "Sofia mastered the art of sourdough and wood-fired ovens in Naples. Her crusts are legendary for their light, airy structure.",
-    imageUrl: "https://placehold.co/200x200/f7f2e9/edc84b?text=GALLO",
+    imageUrl: "https://placehold.co/200x200/f7f2e9/9c8978?text=GALLO",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const CHEFS_DATA: Chef[] = [
     title: "Pastry Chef",
     specialty: "Classic Italian Desserts",
     bio: "Marco is responsible for our decadent desserts, combining modern artistry with timeless recipes passed down from his grandmother.",
-    imageUrl: "https://placehold.co/200x200/edc84b/252525?text=CONTI",
+    imageUrl: "https://placehold.co/200x200/9c8978/252525?text=CONTI",
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const CHEFS_DATA: Chef[] = [
     title: "Sous Chef & Sourcing",
     specialty: "Local & Seasonal Ingredients",
     bio: "Isabella manages our supply chain, ensuring every vegetable and herb is sourced sustainably and locally, maintaining peak freshness.",
-    imageUrl: "https://placehold.co/200x200/f7f2e9/edc84b?text=RICCI",
+    imageUrl: "https://placehold.co/200x200/f7f2e9/9c8978?text=RICCI",
   },
 ];
 
@@ -50,7 +50,7 @@ const ChefsSection: React.FC = () => {
       className="
         flex flex-col items-center p-6 rounded-lg
         bg-white border border-gray-200/70 
-        hover:border-[#edc84b] transition-all duration-300
+        hover:border-[#9c8978] transition-all duration-300
       "
     >
       <img
@@ -67,7 +67,7 @@ const ChefsSection: React.FC = () => {
         {chef.name}
       </h3>
 
-      <p className="text-sm italic text-[#edc84b] mt-1 text-center">
+      <p className="text-sm italic text-[#9c8978] mt-1 text-center">
         {chef.title}
       </p>
 
