@@ -95,7 +95,7 @@ const ContactForm: React.FC = () => {
         disabled={status === "submitting"}
         className="self-start text-sm uppercase tracking-[0.3em] text-[#252525] border border-[#9c8978] px-8 py-3 hover:bg-[#9c8978] hover:text-white transition-all duration-300 disabled:opacity-50"
       >
-        {status === "submitting" ? "Sending..." : "Reserve / Inquiry"}
+        {status === "submitting" ? "Sending..." : "Order / Inquiry"}
       </button>
 
       {/* Status Messages */}

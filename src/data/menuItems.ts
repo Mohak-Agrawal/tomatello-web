@@ -28,17 +28,25 @@ import MushroomAranciniImage from "../assets/menu/mushroom-aranchini.jpeg";
 import SaffronAranciniImage from "../assets/menu/saffron-arancini.jpg";
 
 import LambAranciniImage from "../assets/menu/lamb-arancini.jpg";
+import BoxOfThreeArancini from "../assets/menu/BoxOfThreeArancini.jpeg";
 
 // Neapolitan Pizza
 import MargheritaNapoletanaImage from "../assets/menu/margherita-napoletana.jpeg";
 import BurrataEPomodoroImage from "../assets/menu/burrata-e-pomodoro.jpeg";
 import DiavoloDiPolloImage from "../assets/menu/diavolo-di-pollo.jpeg";
 import QuattroFormaggiImage from "../assets/menu/quattro-formaggi.jpeg";
+import MargherinaraPestoNapoletanaImage from "../assets/menu/margherita-napoletana.jpeg";
+import NapoliTruffleFungiNapoletanaImage from "../assets/menu//margherita-napoletana.jpeg";
+import ClassicPepperoniNapoletanaPizzaImage from "../assets/menu/margherita-napoletana.jpeg";
 
 // Signature Alla Pala Pizza
 import AllaPalaMargheritaImage from "../assets/menu/alla-pala-margherita.jpeg";
+import AllaPalaFunghiImage from "../assets/menu/alla-pala-funghi.jpeg";
 import AllaPalaPestoImage from "../assets/menu/alla-pala-pesto.jpeg";
 import AllaPalaPepperoniImage from "../assets/menu/alla-pala-pepperoni.jpeg";
+
+//Pasta
+import ArrabiataImage from "../assets/menu/Arrabiata.jpeg";
 
 // Chef’s Signature Pasta & Risotti
 import CacioEPepeImage from "../assets/menu/cacio-e-pepe.jpeg";
@@ -136,7 +144,7 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Soups",
     imageUrl: ZuppaDiGamberiSoupImage,
   },
-
+  // ---------------- Antipasti ----------------
   {
     id: 7,
     name: "Arancini al Telefono",
@@ -182,40 +190,129 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Antipasti & Small Plates",
     imageUrl: LambAranciniImage,
   },
-
-  // ---------------- Neapolitan Pizza ----------------
   {
     id: 11,
-    name: "Margherita Napoletana",
-    description: "San Marzano tomato, mozzarella, basil.",
+    name: "Classic Soaked Tomato Bruschetta",
+    description:
+      " Juicy chopped tomatoes and fresh basil served on toasted bread that naturally absorbs all the flavour. Expect a rich, soaked, flavour-forward bite—no crunch, just pure tomato and herb intensity in every layer. ",
+    price: "₹349",
+    imageAlt: "Tomatobruschetta",
+    tags: ["Vegetarian"],
+    category: "Antipasti & Small Plates",
+    imageUrl: TomatoBruschettaImage,
+  },
+  {
+    id: 12,
+    name: "Arancini Box of 3",
+    description:
+      "A curated tasting box of our signature arancini — one Saffron, one Mushroom, and one Al telefono. Crispy on the outside, rich and comforting inside.",
+    price: "₹449",
+    imageAlt: "aranciniboxof3",
+    tags: ["Vegetarian"],
+    category: "Antipasti & Small Plates",
+    imageUrl: BoxOfThreeArancini,
+  },
+  {
+    id: 13,
+    name: "Avocado Bruschetta",
+    description:
+      " Creamy goat cheese and sliced avocado on toasted sourdough bread..",
+    price: "₹595",
+    imageAlt: "Avocado bruschetta",
+    tags: ["Vegetarian"],
+    category: "Antipasti & Small Plates",
+    imageUrl: AvocadoBruschettaImage,
+  },
+  {
+    id: 14,
+    name: "Mushroom Bruschetta",
+    description:
+      " Crispy deep fried rice balls loaded with fresh cremini, pink oyster, king oyster, cooked in stock, parmesan cheese, served with rich truffle aioli.",
     price: "₹499",
-    imageAlt: "Margherita pizza",
+    imageAlt: "Mushroom bruschetta",
+    tags: ["Vegetarian"],
+    category: "Antipasti & Small Plates",
+    imageUrl: AvocadoBruschettaImage,
+  },
+  {
+    id: 15,
+    name: "Butter Garlic Prawn",
+    description: "Succulent prawns sautéed in garlic butter.",
+    price: "₹699",
+    imageAlt: "Butter garlic prawn",
+    tags: ["Seafood"],
+    category: "Antipasti & Small Plates",
+    imageUrl: ButterGarlicPrawnImage,
+  },
+  // ---------------- Neapolitan Pizza ----------------
+  {
+    id: 16,
+    name: "Classic Margherita Napoletana",
+    description:
+      "Soft, airy Neapolitan crust topped with San Marzano-style tomatoes, mozzarella & fresh basil.",
+    price: "₹595",
+    imageAlt: "Classic Margherita pizza",
     tags: ["Classic"],
     category: "Neapolitan Pizza",
     imageUrl: MargheritaNapoletanaImage,
   },
   {
-    id: 12,
+    id: 17,
     name: "Burrata e Pomodoro",
-    description: "Tomato base topped with fresh burrata.",
-    price: "₹699",
+    description:
+      "Neapolitan pizza with San Marzano tomato sauce and mozzarella, finished with fresh burrata added post-bake, basil and extra virgin olive oil.",
+    price: "₹949",
     imageAlt: "Burrata pizza",
     tags: ["Signature"],
     category: "Neapolitan Pizza",
     imageUrl: BurrataEPomodoroImage,
   },
   {
-    id: 13,
+    id: 18,
+    name: "Margherinara Pesto Napoletana",
+    description:
+      "A gourmet variation combining elements of both the Margherita and Marinara pizzas. San Marzano tomatoes, oregano flavored cherry tomatoes, fresh Mozzarella Cheese, grana Padano, Basil with Pesto.",
+    price: "₹899",
+    imageAlt: "Margherinara Pesto Napoletana",
+    tags: ["Signature"],
+    category: "Neapolitan Pizza",
+    imageUrl: MargherinaraPestoNapoletanaImage,
+  },
+  {
+    id: 19,
+    name: "Napoli Truffle Fungi",
+    description:
+      "Slow cooked wild mushroom ragu, fresh Mozzarella Cheese, fresh herbs with truffle oil, Extra virgin olive oil.",
+    price: "₹875",
+    imageAlt: "Napoli Truffle Fungi Napoletana Pizza",
+    tags: ["Signature"],
+    category: "Neapolitan Pizza",
+    imageUrl: NapoliTruffleFungiNapoletanaImage,
+  },
+  {
+    id: 20,
     name: "Diavolo di Pollo",
-    description: "Spicy chicken with chili flakes and mozzarella.",
-    price: "₹649",
+    description:
+      "San Marzano tomatoes, spicy Chicken Salami, Red paprika slice for extra heat, fresh Mozzarella Cheese, fresh Italian Basil, Extra virgin olive oil.",
+    price: "₹859",
     imageAlt: "Spicy chicken pizza",
     tags: ["Spicy"],
     category: "Neapolitan Pizza",
     imageUrl: DiavoloDiPolloImage,
   },
   {
-    id: 14,
+    id: 21,
+    name: "Classic Pepperoni Napoletana Pizza",
+    description:
+      "San Marzano tomatoes, Tender pork pepperoni, fresh Mozzarella Cheese, fresh Italian Basil, Extra virgin olive oil.",
+    price: "₹1149",
+    imageAlt: "Classic Pepperoni Napoletana Pizza",
+    tags: ["Spicy"],
+    category: "Neapolitan Pizza",
+    imageUrl: ClassicPepperoniNapoletanaPizzaImage,
+  },
+  {
+    id: 22,
     name: "Quattro Formaggi",
     description: "Four-cheese blend with rich creamy texture.",
     price: "₹699",
@@ -227,130 +324,258 @@ export const MENU_ITEMS: MenuItem[] = [
 
   // ---------------- Signature Alla Pala Pizza ----------------
   {
-    id: 15,
-    name: "Alla Pala Margherita",
-    description: "Roman-style rectangular pizza with tomato and mozzarella.",
-    price: "₹749",
-    imageAlt: "Alla pala margherita",
+    id: 23,
+    name: "Classic Margherita Pizza Alla Pala",
+    description:
+      "A Roman-style, long rectangular pizza with crisp crust and soft center, layered with fresh tomato sauce, creamy mozzarella, and fresh basil.",
+    price: "₹759",
+    imageAlt: "Classic Margherita Pizza Alla Pala",
     tags: ["Roman Style"],
     category: "Signature Alla Pala Pizza",
     imageUrl: AllaPalaMargheritaImage,
   },
   {
-    id: 16,
-    name: "Alla Pala Pesto",
-    description: "Fresh basil pesto with mozzarella.",
+    id: 24,
+    name: "Pizza Alla Pala Al Funghi",
+    description:
+      "Roman-style, stone-baked pizza with a crisp base, topped with sautéed mushrooms, mozzarella, and a hint of truffle oil.",
     price: "₹799",
-    imageAlt: "Alla pala pesto",
+    imageAlt: "Pizza Alla Pala Al Funghi",
+    tags: ["Vegetarian"],
+    category: "Signature Alla Pala Pizza",
+    imageUrl: AllaPalaFunghiImage,
+  },
+  {
+    id: 25,
+    name: "Basil Pesto & Creamy Burrata Pizza Alla Pala",
+    description:
+      "Roman-style pizza with a crispy base, topped with fresh basil pesto, creamy burrata, and basil leaves.",
+    price: "₹1049",
+    imageAlt: "Basil Pesto & Creamy Burrata Pizza Alla Pala",
     tags: ["Vegetarian"],
     category: "Signature Alla Pala Pizza",
     imageUrl: AllaPalaPestoImage,
   },
   {
-    id: 17,
-    name: "Alla Pala Pepperoni",
-    description: "Classic pepperoni with tomato and mozzarella.",
-    price: "₹849",
-    imageAlt: "Alla pala pepperoni",
+    id: 26,
+    name: "Pizza Alla Pala Quattro Formaggi",
+    description:
+      "Crispy Roman-style pizza topped with a decadent blend of mozzarella, smoky Scamorza, nutty Parmigiano, and creamy Brie. Each bite is rich, melty, and irresistibly cheesy.",
+    price: "₹1095",
+    imageAlt: "Pizza Alla Pala Quattro Formaggi",
+    tags: ["Vegetarian"],
+    category: "Signature Alla Pala Pizza",
+    imageUrl: AllaPalaMargheritaImage,
+  },
+  {
+    id: 27,
+    name: "Pizza Alla Pala Al Pepperoni",
+    description:
+      "A Roman-style crust baked to airy perfection, topped with tomato sauce, melted mozzarella, and slices of spicy pepperoni.",
+    price: "₹1165",
+    imageAlt: "Pizza Alla Pala Al Pepperoni",
     tags: ["Meat"],
     category: "Signature Alla Pala Pizza",
     imageUrl: AllaPalaPepperoniImage,
   },
+  {
+    id: 28,
+    name: "Pizza Alla Pala Al Chicken Pepperoni",
+    description:
+      "Roman-style long rectangular pizza with San Marzano tomato sauce, chicken pepperoni, and melted mozzarella.",
+    price: "₹945",
+    imageAlt: "Pizza Alla Pala Al Chicken Pepperoni",
+    tags: ["Meat"],
+    category: "Signature Alla Pala Pizza",
+    imageUrl: AllaPalaPepperoniImage,
+  },
+  {
+    id: 29,
+    name: "Goat Cheese & Prosciutto Pizza Alla Pala",
+    description:
+      "Roman-style pizza with a crisp, light base loaded with tangy goat cheese, prosciutto, and fresh rocket leaves.",
+    price: "₹1399",
+    imageAlt: "Goat Cheese & Prosciutto Pizza Alla Pala",
+    tags: ["Meat"],
+    category: "Signature Alla Pala Pizza",
+    imageUrl: AllaPalaMargheritaImage,
+  },
+
+  // ---------------- Pasta ----------------
+
+  {
+    id: 30,
+    name: "Penne Arrabbiata",
+    description:
+      " Classic Roman penne pasta in a spicy tomato-garlic sauce, made with San Marzano tomatoes, chilli flakes, and extra virgin olive oil. Finished with fresh parsley and a touch of grated parmesan.",
+    price: "₹549",
+    imageAlt: " Penne Arrabbiata",
+    tags: ["Pasta", "Classic"],
+    category: "Pasta",
+    imageUrl: ArrabiataImage,
+  },
+  {
+    id: 31,
+    name: " Spaghetti Aglio E Olio ",
+    description:
+      " Classic Italian pasta, made with garlic, olive oil, and a touch of chilli for subtle heat.",
+    price: "₹549",
+    imageAlt: "Spaghetti Aglio E Olio",
+    tags: ["Pasta", "Classic"],
+    category: "Pasta",
+    imageUrl: ArrabiataImage,
+  },
+  {
+    id: 32,
+    name: " Fettuccini Alfredo ",
+    description:
+      "Long flat pasta tossed in a silky, creamy white sauce made with butter, cream and aged Parmigiano cheese.",
+    price: "₹595",
+    imageAlt: " Fettuccini Alfredo",
+    tags: ["Pasta", "Classic"],
+    category: "Pasta",
+    imageUrl: ArrabiataImage,
+  },
+  {
+    id: 33,
+    name: " Fusilli Pesto Genovese ",
+    description:
+      "Spiral-shaped pasta tossed in our house-made Genovese basil pesto with pine nuts, garlic, parmesan cheese and extra virgin olive oil.",
+    price: "₹595",
+    imageAlt: " Fusilli Pesto Genovese ",
+    tags: ["Pasta", "Classic"],
+    category: "Pasta",
+    imageUrl: ArrabiataImage,
+  },
+  {
+    id: 34,
+    name: " Rigatoni Rosa ",
+    description:
+      "Tube-shaped pasta tossed in a rich, creamy tomato-rosa (pink) sauce - a perfect red sauce + white sauce pasta blend with parmesan and Italian herbs.",
+    price: "₹599",
+    imageAlt: " Rigatoni Rosa ",
+    tags: ["Pasta", "Classic"],
+    category: "Pasta",
+    imageUrl: ArrabiataImage,
+  },
+  {
+    id: 35,
+    name: "Ravioli Chicken With Rustic Contadina Sauce",
+    description:
+      "Square shaped pasta pockets stuffed with chicken bourguignon. Served with a rustic, spicy tomato Contadina sauce and diced potatoes.",
+    price: "₹745",
+    imageAlt: " Ravioli Chicken With Rustic Contadina Sauce ",
+    tags: ["Pasta", "Classic"],
+    category: "Pasta",
+    imageUrl: ArrabiataImage,
+  },
+  {
+    id: 36,
+    name: " Fettuccine Lamb Shank ",
+    description:
+      "Handmade long, flat and thick noodle pasta with 24h slow cooked lamb shank and pecorino cheese.",
+    price: "₹790",
+    imageAlt: " Fettuccine Lamb Shank ",
+    tags: ["Pasta", "Classic"],
+    category: "Pasta",
+    imageUrl: ArrabiataImage,
+  },
 
   // ---------------- Chef’s Signature Pasta & Risotti ----------------
   {
-    id: 101,
+    id: 37,
     name: "Cacio e Pepe",
     description:
-      "Roman classic with Pecorino Romano and freshly cracked black pepper.",
-    price: "₹649",
+      "Not your usual creamy white sauce pasta. Cacio e Pepe uses Pecorino cheese and cracked black pepper to create a natural creaminess — bold, salty, and perfectly balanced. Marked non-veg only because of the traditional cheese; there’s no meat in it. .",
+    price: "₹899",
     imageAlt: "Cacio e Pepe pasta",
     tags: ["Pasta", "Classic"],
-    category: "Chef’s Signature Pasta & Risotti",
+    category: "Cacio e Pepe",
     imageUrl: CacioEPepeImage,
   },
   {
-    id: 102,
+    id: 38,
     name: "Cappellacci Burrata & Hazelnut",
     description:
-      "Hand-folded cappellacci filled with creamy burrata, finished with toasted hazelnut butter.",
-    price: "₹799",
+      "Handmade pasta pockets filled with creamy burrata and toasted hazelnut butter sauce. Must-try for lovers of fine Italian cuisine.",
+    price: "₹845",
     imageAlt: "Cappellacci with burrata and hazelnut",
     tags: ["Signature", "Pasta"],
     category: "Chef’s Signature Pasta & Risotti",
     imageUrl: CappellacciBurrataHazelnutImage,
   },
   {
-    id: 103,
-    name: "Culurgiones",
+    id: 39,
+    name: "Culurgiones (Sardinia Region)",
     description:
-      "Traditional Sardinian stuffed pasta with delicate filling and light butter sauce.",
-    price: "₹749",
+      "Handmade Sardinian pasta pockets, filled with mashed potato, pecorino, lemon zest, and mint, served with nutty, aromatic burnt butter sage sauce.",
+    price: "₹945",
     imageAlt: "Culurgiones pasta",
     tags: ["Pasta"],
     category: "Chef’s Signature Pasta & Risotti",
     imageUrl: CulurgionesImage,
   },
   {
-    id: 104,
-    name: "Prawn Linguine",
+    id: 40,
+    name: "Linguine Prawn",
     description:
-      "Linguine tossed with prawns, garlic, white wine, and fresh herbs.",
-    price: "₹849",
+      "For seafood lovers - classic Italian long, flat strand pasta with prawns, cherry tomatoes, garlic and seafood sauce.",
+    price: "₹945",
     imageAlt: "Prawn linguine pasta",
     tags: ["Seafood", "Pasta"],
     category: "Chef’s Signature Pasta & Risotti",
     imageUrl: PrawnLinguineImage,
   },
   {
-    id: 105,
-    name: "Raviolo Carbonara",
+    id: 41,
+    name: "Raviolo Carbonara (Lazio Region )",
     description:
-      "Large stuffed raviolo inspired by classic Roman carbonara flavors.",
-    price: "₹799",
+      " A single, large raviolo filled with Pecorino fondue, crispy guanciale, and a luscious egg yolk sauce, delivering a rich, creamy carbonara experience. Guanciale is an Italian cured pork jowl prized for rich flavour and velvety texture.",
+    price: "₹1199",
     imageAlt: "Raviolo carbonara",
     tags: ["Pasta", "Signature"],
     category: "Chef’s Signature Pasta & Risotti",
     imageUrl: RavioloCarbonaraImage,
   },
   {
-    id: 106,
-    name: "Risotto Cherry Tomato & Burrata",
+    id: 42,
+    name: "Risotto Cherry Yellow Tomato & Burrata",
     description:
-      "Creamy risotto finished with cherry tomatoes and fresh burrata.",
-    price: "₹849",
-    imageAlt: "Cherry tomato burrata risotto",
+      " Creamy Arborio rice slow-cooked with  yellow cherry tomatoes, fresh basil, and a drizzle of EVOO, served with whole of fresh Burrata.",
+    price: "₹890",
+    imageAlt: "Cherry tomato yellow burrata risotto",
     tags: ["Risotto", "Signature"],
     category: "Chef’s Signature Pasta & Risotti",
     imageUrl: RisottoCherryTomatoBurrataImage,
   },
   {
-    id: 107,
-    name: "Risotto Lemon Asparagus",
+    id: 43,
+    name: "Risotto Asparagus & Scamorza Smoked cheese",
     description:
-      "Arborio rice slow-cooked with vegetable stock, lemon zest, and fresh asparagus.",
-    price: "₹799",
-    imageAlt: "Lemon asparagus risotto",
+      " Creamy Italian rice dish slowly cooked in broth infused with lemon asparagus, smoked scamorza cheese.",
+    price: "₹749",
+    imageAlt: " Risotto Asparagus & Scamorza Smoked cheese ",
     tags: ["Risotto"],
     category: "Chef’s Signature Pasta & Risotti",
     imageUrl: RisottoLemonAsparagusImage,
   },
   {
-    id: 108,
+    id: 44,
     name: "Risotto Mushroom",
-    description: "Creamy risotto with wild mushrooms, parmesan, and thyme.",
-    price: "₹799",
+    description:
+      " Italian rice cooked in broth loaded with Shroomery mushrooms selection, butter and parmesan.",
+    price: "₹690",
     imageAlt: "Mushroom risotto",
     tags: ["Risotto"],
     category: "Chef’s Signature Pasta & Risotti",
     imageUrl: RisottoMushroomImage,
   },
   {
-    id: 109,
+    id: 45,
     name: "Tagliolini Truffle",
     description:
-      "Fresh tagliolini finished with truffle butter and aged parmesan.",
-    price: "₹999",
+      " Handmade thin, flat strands of pasta, rich butter truffle sauce, and freshly shaved truffles.",
+    price: "₹2150",
     imageAlt: "Truffle tagliolini pasta",
     tags: ["Pasta", "Truffle", "Signature"],
     category: "Chef’s Signature Pasta & Risotti",
@@ -359,42 +584,67 @@ export const MENU_ITEMS: MenuItem[] = [
 
   // ---------------- Mains ----------------
   {
-    id: 24,
+    id: 46,
     name: "Chicken Milanese",
-    description: "Crispy breaded chicken with lemon and greens.",
-    price: "₹899",
+    description:
+      " Savour our golden, crispy chicken breast, breaded with parmesan cheese and pan-fried to perfection. Served with a vibrant salsa of Kalamata olives and capers, accompanied by a fresh rocket salad, this dish delivers the classic, flavourful taste of milan.",
+    price: "₹890",
     imageAlt: "Chicken Milanese",
     tags: ["Main Course"],
     category: "Mains",
     imageUrl: ChickenMilaneseImage,
   },
   {
-    id: 25,
-    name: "Gnocchi alla Sorrentina",
-    description: "Baked gnocchi with tomato sauce and mozzarella.",
-    price: "₹799",
-    imageAlt: "Gnocchi",
+    id: 47,
+    name: "Gnocchi alla Sorrentina (Amalfi Coast)",
+    description:
+      "Amalfi coast. Soft and bite sized handcrafted pieces of pasta made from potato in tomato sauce with Mozzarella and basil.",
+    price: "₹690",
+    imageAlt: "Gnocchi alla Sorrentina",
     tags: ["Vegetarian"],
     category: "Mains",
     imageUrl: GnocchiAllaSorrentinaImage,
   },
-
+  {
+    id: 48,
+    name: " Gnocchi alla Puttanesca (add on anchovies)",
+    description:
+      " Soft potato gnocchi tossed in a bold, spicy Neapolitan tomato sauce with olives, capers, garlic, chilli, and oregano.",
+    price: "₹690",
+    imageAlt: "Gnocchi alla Puttanesca (add on anchovies)",
+    tags: ["Vegetarian"],
+    category: "Mains",
+    imageUrl: GnocchiAllaSorrentinaImage,
+  },
+  {
+    id: 49,
+    name: " Melanzana Alla Parmigiana",
+    description:
+      " Layers of pan fried eggplant baked with a san marzano tomato sauce, basil and a blend of parmigiano reggiano and Mozzarella.",
+    price: "₹790",
+    imageAlt: " Melanzana Alla Parmigiana ",
+    tags: ["Vegetarian"],
+    category: "Mains",
+    imageUrl: GnocchiAllaSorrentinaImage,
+  },
   // ---------------- Salads ----------------
   {
-    id: 26,
+    id: 50,
     name: "Caesar Salad",
-    description: "Romaine lettuce, parmesan, croutons.",
-    price: "₹399",
+    description:
+      "Fresh romaine lettuce coated in a classic creamy Caesar dressing, topped with shaved Parmesan and toasted sourdough croutons for crunch.",
+    price: "₹489",
     imageAlt: "Caesar salad",
     tags: ["Classic"],
     category: "Salads",
     imageUrl: CaesarSaladImage,
   },
   {
-    id: 27,
+    id: 51,
     name: "Cherry Tomato Burrata Salad",
-    description: "Fresh burrata with cherry tomatoes and basil.",
-    price: "₹549",
+    description:
+      "Soft, milky burrata served with red/yellow cherry tomatoes, fresh basil, and a drizzle of EVOO.",
+    price: "₹745",
     imageAlt: "Burrata salad",
     tags: ["Vegetarian"],
     category: "Salads",
@@ -403,7 +653,7 @@ export const MENU_ITEMS: MenuItem[] = [
 
   // ---------------- Sides ----------------
   {
-    id: 28,
+    id: 52,
     name: "Parmesan Fries",
     description: "Crispy fries tossed in parmesan and herbs.",
     price: "₹299",
@@ -412,27 +662,37 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Sides",
     imageUrl: ParmesanFriesImage,
   },
+  {
+    id: 53,
+    name: " Roast Potatoes ",
+    description:
+      " Crispy golden potatoes roasted with olive oil, garlic, and herbs.",
+    price: "₹299",
+    imageAlt: " Roast Potatoes ",
+    tags: ["Side"],
+    category: "Sides",
+    imageUrl: ParmesanFriesImage,
+  },
 
   // ---------------- Dessert ----------------
   {
-    id: 29,
+    id: 54,
     name: "Tiramisù",
     description:
-      "Espresso-soaked ladyfingers layered with mascarpone cream and finished with cocoa dust.",
-    price: "₹549",
+      " An authentic Italian masterpiece featuring layers of espresso-soaked ladyfingers, velvety mascarpone cream, and a generous dusting of premium cocoa powder.",
+    price: "₹545",
     imageAlt: "Tiramisu",
     tags: ["Classic", "Italian"],
     category: "Dessert",
     imageUrl: TiramisuClassicoImage,
   },
-
   {
-    id: 30,
-    name: "Chocolate Mousse",
+    id: 55,
+    name: "Mousse al Cioccolato",
     description:
-      "Rich, airy dark chocolate mousse finished with a delicate cocoa glaze.",
-    price: "₹329",
-    imageAlt: "Chocolate mousse",
+      " Italian-style chocolate mousse made with 55% dark Callebaut Belgian chocolate, whipped to a smooth, airy texture for a deep, balanced cocoa finish.",
+    price: "₹349",
+    imageAlt: " Mousse al Cioccolato ",
     tags: ["Chocolate"],
     category: "Dessert",
     imageUrl: ChocolateMousseImage,
@@ -445,6 +705,7 @@ export const MENU_CATEGORIES = [
   "Antipasti & Small Plates",
   "Neapolitan Pizza",
   "Signature Alla Pala Pizza",
+  "Pasta",
   "Chef’s Signature Pasta & Risotti",
   "Mains",
   "Salads",

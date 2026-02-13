@@ -1,5 +1,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AboutSection from "../components/AboutSection";
+import AdminDashboard from "../components/AdminDashboard";
 import CartDrawer from "../components/CartDrawer";
 import ContactSection from "../components/ContactSection";
 import HeroSection from "../components/Hero";
@@ -149,72 +151,83 @@ const App: React.FC = () => {
   }, [observerCallback]);
 
   return (
-    // The CustomStyles component is rendered first to apply global theme styles
-    <>
-      {/* <CustomStyles /> */}
-      <Navbar
-        scrollTo={scrollTo}
-        activeSection={activeSection}
-        totalCartItems={totalCartItems}
-        toggleCart={toggleCart} // Pass toggle function to Navbar
-      />
+    <Router>
+      <Routes>
+        {/* Main Application */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar
+                scrollTo={scrollTo}
+                activeSection={activeSection}
+                totalCartItems={totalCartItems}
+                toggleCart={toggleCart} // Pass toggle function to Navbar
+              />
 
-      {/* Main content container with max width and padding */}
-      <main className=" w-full " role="main">
-        {/* 1. HERO SECTION */}
-        <div ref={sectionRefs.hero} className="scroll-mt-16">
-          <HeroSection scrollTo={scrollTo} />
-        </div>
-        {/* <div ref={sectionRefs.about} className="scroll-mt-16">
-          <CraftSection />
-        </div> */}
-        {/* 2. MENU SECTION (NOW FIRST) */}
-        <div ref={sectionRefs.menu} className="scroll-mt-16">
-          <MenuSection
-            addToCart={addToCart}
-            cartQuantities={cartQuantities}
-            updateQuantity={updateQuantity}
-          />
-        </div>
+              {/* Main content container with max width and padding */}
+              <main className=" w-full " role="main">
+                {/* 1. HERO SECTION */}
+                <div ref={sectionRefs.hero} className="scroll-mt-16">
+                  <HeroSection scrollTo={scrollTo} />
+                </div>
+                {/* <div ref={sectionRefs.about} className="scroll-mt-16">
+                  <CraftSection />
+                </div> */}
+                {/* 2. MENU SECTION (NOW FIRST) */}
+                <div ref={sectionRefs.menu} className="scroll-mt-16">
+                  <MenuSection
+                    addToCart={addToCart}
+                    cartQuantities={cartQuantities}
+                    updateQuantity={updateQuantity}
+                  />
+                </div>
 
-        {/* 3. ABOUT SECTION */}
-        <div ref={sectionRefs.about} className="scroll-mt-16">
-          <AboutSection />
-        </div>
+                {/* 3. ABOUT SECTION */}
+                <div ref={sectionRefs.about} className="scroll-mt-16">
+                  <AboutSection />
+                </div>
 
-        {/* 4. TESTIMONIALS SECTION */}
-        <div ref={sectionRefs.testimonials} className="scroll-mt-16">
-          <TestimonialsSection />
-        </div>
+                {/* 4. TESTIMONIALS SECTION */}
+                <div ref={sectionRefs.testimonials} className="scroll-mt-16">
+                  <TestimonialsSection />
+                </div>
 
-        {/* 5. OUR CHEFS SECTION */}
-        {/* <div ref={sectionRefs.chefs} className="px-4">
-          <ChefsSection />
-        </div> */}
+                {/* 5. OUR CHEFS SECTION */}
+                {/* <div ref={sectionRefs.chefs} className="px-4">
+                  <ChefsSection />
+                </div> */}
 
-        {/* 5. OUR CHEFS SECTION */}
-        {/* <div ref={sectionRefs.chefs} className="scroll-mt-16">
-          <CraftSection />
-        </div> */}
+                {/* 5. OUR CHEFS SECTION */}
+                {/* <div ref={sectionRefs.chefs} className="scroll-mt-16">
+                  <CraftSection />
+                </div> */}
 
-        {/* 6. CONTACT US SECTION */}
-        <div ref={sectionRefs.contact} className="scroll-mt-16">
-          <ContactSection />
-        </div>
+                {/* 6. CONTACT US SECTION */}
+                <div ref={sectionRefs.contact} className="scroll-mt-16">
+                  <ContactSection />
+                </div>
 
-        {/* Global Footer */}
-        <Footer />
-      </main>
+                {/* Global Footer */}
+                <Footer />
+              </main>
 
-      {/* Cart Drawer is always rendered but slides in/out based on state */}
-      <CartDrawer
-        cart={cart}
-        isCartOpen={isCartOpen}
-        toggleCart={toggleCart}
-        updateQuantity={updateQuantity}
-        removeFromCart={removeFromCart}
-      />
-    </>
+              {/* Cart Drawer is always rendered but slides in/out based on state */}
+              <CartDrawer
+                cart={cart}
+                isCartOpen={isCartOpen}
+                toggleCart={toggleCart}
+                updateQuantity={updateQuantity}
+                removeFromCart={removeFromCart}
+              />
+            </>
+          }
+        />
+
+        {/* Admin route */}
+        {/* <Route path="/admin" element={<AdminDashboard />} /> */}
+      </Routes>
+    </Router>
   );
 };
 
