@@ -1,89 +1,94 @@
 import SectionHeader from "./SectionHeader";
-import Img1 from "../assets/Craft.png";
-import Img2 from "../assets/Craft1.jpg";
-import Img3 from "../assets/Craft2.jpg";
-import Img4 from "../assets/Craft3.jpg";
-import Img5 from "../assets/Craft4.jpg";
-import Img6 from "../assets/Craft5.jpg";
+import CraftHero from "../assets/Craft.png";
 
 const CraftSection: React.FC = () => {
   return (
-    <section id="craft" className="py-36 bg-[#f6f4ef]">
+    <section id="craft" className="py-40 bg-[#f6f4ef]">
       <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
         <SectionHeader
           title="Our Story & Craft"
           subtitle="Italian cuisine, approached with discipline and intention."
         />
-        {/* Manifesto Text */}
-        <div className="mt-16 max-w-3xl mx-auto space-y-8 text-neutral-700 text-[17px] leading-relaxed font-light text-center">
-          <p>
-            Tomatello was born from a simple belief — Italian food is not a
-            trend. It is a craft.
-          </p>
 
-          <p>
-            Every sauce begins at its base. Every pasta is shaped by hand. Every
-            preparation honours the technique it comes from — not adapted, not
-            rushed, not simplified.
-          </p>
+        {/* Elegant Panel */}
+        <div className="mt-28 relative bg-[#efeae2] rounded-3xl px-16 py-24 border border-neutral-300/40">
+          {/* Subtle Inner Frame */}
+          <div className="absolute inset-6 border border-neutral-300/30 rounded-3xl pointer-events-none" />
 
-          <p>
-            Technique matters. Temperature matters. Timing matters. The details
-            define the dish.
-          </p>
+          {/* Decorative Header */}
+          <div className="relative text-center mb-16">
+            <div className="flex items-center justify-center gap-6 mb-6">
+              <div className="h-px w-16 bg-neutral-400/60" />
+              <span className="tracking-[0.35em] text-xs text-neutral-500 uppercase">
+                Tradition
+              </span>
+              <div className="h-px w-16 bg-neutral-400/60" />
+            </div>
 
-          <div className="pt-6 border-t border-neutral-300 max-w-sm mx-auto" />
+            <h2 className="text-5xl font-serif text-neutral-900 tracking-wide">
+              Our Craft
+            </h2>
+          </div>
 
-          <p className="italic text-neutral-600">
-            This is not commercial Italian. This is cucina — as it is meant to
-            be.
-          </p>
+          <div className="grid md:grid-cols-3 gap-16 items-center relative">
+            {/* Left Column */}
+            <div className="space-y-12 text-neutral-700 text-sm leading-relaxed">
+              <div>
+                <h4 className="font-medium text-neutral-900 mb-3 tracking-wide">
+                  Handmade Daily
+                </h4>
+                <p>
+                  Dough rolled fresh each morning. Shaped by hand. Texture
+                  formed through pressure and patience.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-medium text-neutral-900 mb-3 tracking-wide">
+                  Measured Filling
+                </h4>
+                <p>
+                  Pecorino folded with balance. Richness controlled. Structure
+                  preserved.
+                </p>
+              </div>
+            </div>
+
+            {/* Center Image (Arched) */}
+            <div className="flex justify-center">
+              <div className="overflow-hidden rounded-t-[200px] rounded-b-[28px] shadow-lg">
+                <img
+                  src={CraftHero}
+                  alt="Artisanal raviolo preparation"
+                  className="w-[380px] h-[460px] object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Right Column */}
+            <div className="space-y-12 text-neutral-700 text-sm leading-relaxed">
+              <div>
+                <h4 className="font-medium text-neutral-900 mb-3 tracking-wide">
+                  Slow Rendering
+                </h4>
+                <p>
+                  Guanciale cooked gradually. Fat becomes flavour. Heat is
+                  controlled.
+                </p>
+              </div>
+
+              <div>
+                <h4 className="font-medium text-neutral-900 mb-3 tracking-wide">
+                  Cultural Integrity
+                </h4>
+                <p>
+                  Regional technique preserved. No dilution. No unnecessary
+                  reinvention.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        {/* Gallery */}
-        {/* Gallery */}
-        <div className="mt-28 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="overflow-hidden rounded-2xl">
-            <img
-              src={Img6}
-              alt=""
-              className="w-full h-[420px] object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="overflow-hidden rounded-2xl mt-6 md:mt-12">
-            <img
-              src={Img2}
-              alt=""
-              className="w-full h-[300px] object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="overflow-hidden rounded-2xl">
-            <img
-              src={Img3}
-              alt=""
-              className="w-full h-[460px] object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="overflow-hidden rounded-2xl mt-6">
-            <img
-              src={Img4}
-              alt=""
-              className="w-full h-[340px] object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
-            />
-          </div>
-
-          <div className="overflow-hidden rounded-2xl md:col-span-2">
-            <img
-              src={Img5}
-              alt=""
-              className="w-full h-[400px] object-cover transition-transform duration-700 ease-out hover:scale-[1.02]"
-            />
-          </div>
-        </div>
-        v
       </div>
     </section>
   );

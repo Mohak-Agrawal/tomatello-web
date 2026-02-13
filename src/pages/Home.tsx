@@ -43,7 +43,7 @@ const App: React.FC = () => {
         return prevCart.map((cartItem) =>
           cartItem.id === item.id
             ? { ...cartItem, quantity: cartItem.quantity + 1 }
-            : cartItem,
+            : cartItem
         );
       } else {
         // Add new item to cart
@@ -64,7 +64,7 @@ const App: React.FC = () => {
         .map((item) =>
           item.id === itemId
             ? { ...item, quantity: item.quantity + change }
-            : item,
+            : item
         )
         .filter((item) => item.quantity > 0); // Remove if quantity drops to 0
 
@@ -123,7 +123,7 @@ const App: React.FC = () => {
         }
       });
     },
-    [],
+    []
   );
 
   // Effect to set up the Intersection Observer on mount
@@ -162,14 +162,14 @@ const App: React.FC = () => {
       {/* Main content container with max width and padding */}
       <main className=" w-full " role="main">
         {/* 1. HERO SECTION */}
-        <div ref={sectionRefs.hero} className="scroll-mt-24">
+        <div ref={sectionRefs.hero} className="scroll-mt-16">
           <HeroSection scrollTo={scrollTo} />
         </div>
-        <div ref={sectionRefs.about} className="scroll-mt-24">
+        {/* <div ref={sectionRefs.about} className="scroll-mt-16">
           <CraftSection />
-        </div>
+        </div> */}
         {/* 2. MENU SECTION (NOW FIRST) */}
-        <div ref={sectionRefs.menu} className="scroll-mt-24">
+        <div ref={sectionRefs.menu} className="scroll-mt-16">
           <MenuSection
             addToCart={addToCart}
             cartQuantities={cartQuantities}
@@ -178,12 +178,12 @@ const App: React.FC = () => {
         </div>
 
         {/* 3. ABOUT SECTION */}
-        <div ref={sectionRefs.about} className="scroll-mt-24">
+        <div ref={sectionRefs.about} className="scroll-mt-16">
           <AboutSection />
         </div>
 
         {/* 4. TESTIMONIALS SECTION */}
-        <div ref={sectionRefs.testimonials} className="scroll-mt-24">
+        <div ref={sectionRefs.testimonials} className="scroll-mt-16">
           <TestimonialsSection />
         </div>
 
@@ -193,12 +193,12 @@ const App: React.FC = () => {
         </div> */}
 
         {/* 5. OUR CHEFS SECTION */}
-        {/* <div ref={sectionRefs.chefs} className="scroll-mt-24">
+        {/* <div ref={sectionRefs.chefs} className="scroll-mt-16">
           <CraftSection />
         </div> */}
 
         {/* 6. CONTACT US SECTION */}
-        <div ref={sectionRefs.contact} className="scroll-mt-24">
+        <div ref={sectionRefs.contact} className="scroll-mt-16">
           <ContactSection />
         </div>
 
