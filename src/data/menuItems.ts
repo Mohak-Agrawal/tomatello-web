@@ -24,6 +24,10 @@ import AranciniAlTelefonoImage from "../assets/menu/arancini-al-telefono.jpeg";
 import AvocadoBruschettaImage from "../assets/menu/avocado-bruschetta.jpeg";
 import ButterGarlicPrawnImage from "../assets/menu/butter-garlic-prawn.jpeg";
 import TomatoBruschettaImage from "../assets/menu/tomato-bruschetta.jpeg";
+import MushroomAranciniImage from "../assets/menu/mushroom-aranchini.jpeg";
+import SaffronAranciniImage from "../assets/menu/saffron-arancini.jpg";
+
+import LambAranciniImage from "../assets/menu/lamb-arancini.jpg";
 
 // Neapolitan Pizza
 import MargheritaNapoletanaImage from "../assets/menu/margherita-napoletana.jpeg";
@@ -68,8 +72,9 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: 1,
     name: "Chef’s Table – Veg",
-    description: "A curated vegetarian tasting experience by our chef.",
-    price: "₹2499",
+    description:
+      "A curated vegetarian tasting experience by our chef celebrating seasonal produce, handmade pasta, and refined Italian flavours. Five thoughtfully curated courses, plated and delivered with precision.",
+    price: "₹1725",
     imageAlt: "Chef’s table vegetarian",
     tags: ["Tasting Menu"],
     category: "Chef’s Table",
@@ -78,8 +83,9 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: 2,
     name: "Chef’s Table – Non Veg",
-    description: "A curated non-vegetarian tasting experience by our chef.",
-    price: "₹2999",
+    description:
+      "A curated non-vegetarian tasting experience by our chef celebrating seasonal produce, handmade pasta, and refined Italian flavours. Five thoughtfully curated courses, plated and delivered with precision",
+    price: "₹1849",
     imageAlt: "Chef’s table non vegetarian",
     tags: ["Tasting Menu"],
     category: "Chef’s Table",
@@ -89,8 +95,9 @@ export const MENU_ITEMS: MenuItem[] = [
   // ---------------- Soups ----------------
   {
     id: 3,
-    name: "Butternut Squash Soup",
-    description: "Velvety roasted squash soup with herbs and olive oil.",
+    name: "Roasted Butternut Squash Soup",
+    description:
+      "Roasted butternut squash soup is silky, rich, and full of caramelized flavor. Slow-roasted squash blended with herbs, garlic, and a touch of cream creates a golden bowl of pure seasonal comfort, perfect for chilly evenings.",
     price: "₹349",
     imageAlt: "Butternut squash soup",
     tags: ["Vegetarian"],
@@ -100,8 +107,9 @@ export const MENU_ITEMS: MenuItem[] = [
   {
     id: 4,
     name: "Minestrone Soup",
-    description: "Traditional Italian vegetable soup with seasonal produce.",
-    price: "₹349",
+    description:
+      "Traditional Italian vegetable soup with seasonal produce. This authentic recipe combines aromatic seasonal vegetables, robust tomato broth, and al dente pasta for a truly comforting experience.",
+    price: "₹395",
     imageAlt: "Minestrone soup",
     tags: ["Classic"],
     category: "Soups",
@@ -109,9 +117,9 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 5,
-    name: "Tomato Basil Soup",
+    name: "Pomodoro e Basilico Soup (Tomato and Basil)",
     description: "Slow-cooked tomato soup finished with fresh basil.",
-    price: "₹329",
+    price: "₹345",
     imageAlt: "Tomato basil soup",
     tags: ["Vegetarian"],
     category: "Soups",
@@ -119,8 +127,9 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 6,
-    name: "Zuppa di Gamberi",
-    description: "Italian prawn soup with herbs and garlic.",
+    name: "Zuppa di Gamberi (Prawn Soup)",
+    description:
+      "A hearty, traditional Italian seafood stew featuring juicy prawns in a vibrant, slow-simmered tomato and herb broth.",
     price: "₹449",
     imageAlt: "Prawn soup",
     tags: ["Seafood"],
@@ -128,12 +137,12 @@ export const MENU_ITEMS: MenuItem[] = [
     imageUrl: ZuppaDiGamberiSoupImage,
   },
 
-  // ---------------- Antipasti ----------------
   {
     id: 7,
     name: "Arancini al Telefono",
-    description: "Classic mozzarella-filled Sicilian rice balls.",
-    price: "₹399",
+    description:
+      "Deep fried golden, crispy rice croquette of tomato rice filled with molten mozzarella in the centre.",
+    price: "₹445",
     imageAlt: "Arancini al telefono",
     tags: ["Vegetarian"],
     category: "Antipasti & Small Plates",
@@ -141,33 +150,37 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 8,
-    name: "Avocado Bruschetta",
-    description: "Toasted bread topped with fresh avocado and herbs.",
-    price: "₹349",
-    imageAlt: "Avocado bruschetta",
+    name: "Saffron Arancini",
+    description:
+      "Deep fried golden, crispy saffron-infused rice balls with a gooey cheese centre, bursting with rich flavour.",
+    price: "₹445",
+    imageAlt: "Saffron Arancini",
     tags: ["Vegetarian"],
     category: "Antipasti & Small Plates",
-    imageUrl: AvocadoBruschettaImage,
+    imageUrl: SaffronAranciniImage,
   },
   {
     id: 9,
-    name: "Butter Garlic Prawn",
-    description: "Succulent prawns sautéed in garlic butter.",
-    price: "₹699",
-    imageAlt: "Butter garlic prawn",
-    tags: ["Seafood"],
+    name: " Mushroom Arancini",
+    description:
+      "Crispy deep fried rice balls loaded with fresh cremini, pink oyster, king oyster, cooked in stock, parmesan cheese, served with rich truffle aioli.",
+    price: "₹499",
+    imageAlt: "Mushroom Arancini ",
+    tags: ["Vegetarian"],
     category: "Antipasti & Small Plates",
-    imageUrl: ButterGarlicPrawnImage,
+    imageUrl: MushroomAranciniImage,
   },
+
   {
     id: 10,
-    name: "Tomato Bruschetta",
-    description: "Fresh tomato, basil, and olive oil on toasted bread.",
-    price: "₹299",
-    imageAlt: "Tomato bruschetta",
-    tags: ["Classic"],
+    name: "Lamb Arancini",
+    description:
+      "Crispy deep fried rice balls, filled with slow cooked lamb shanks combined with creamy risotto and pecorino cheese served alongside a classic tangy tomato sauce.",
+    price: "₹599",
+    imageAlt: "Lamb Arancini",
+    tags: ["Non Vegetarian"],
     category: "Antipasti & Small Plates",
-    imageUrl: TomatoBruschettaImage,
+    imageUrl: LambAranciniImage,
   },
 
   // ---------------- Neapolitan Pizza ----------------
