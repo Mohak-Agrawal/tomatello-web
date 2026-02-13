@@ -31,13 +31,13 @@ import LambAranciniImage from "../assets/menu/lamb-arancini.jpg";
 import BoxOfThreeArancini from "../assets/menu/BoxOfThreeArancini.jpeg";
 
 // Neapolitan Pizza
-import MargheritaNapoletanaImage from "../assets/menu/margherita-napoletana.jpeg";
+import MargheritaNapoletanaImage from "../assets/menu/margherita-napoletana.png";
 import BurrataEPomodoroImage from "../assets/menu/burrata-e-pomodoro.jpeg";
 import DiavoloDiPolloImage from "../assets/menu/diavolo-di-pollo.jpeg";
 import QuattroFormaggiImage from "../assets/menu/quattro-formaggi.jpeg";
 import MargherinaraPestoNapoletanaImage from "../assets/menu/margherinara-pesto.jpeg";
-import NapoliTruffleFungiNapoletanaImage from "../assets/menu//margherita-napoletana.jpeg";
-import ClassicPepperoniNapoletanaPizzaImage from "../assets/menu/margherita-napoletana.jpeg";
+import NapoliTruffleFungiNapoletanaImage from "../assets/menu//margherita-napoletana.png";
+import ClassicPepperoniNapoletanaPizzaImage from "../assets/menu/pepperoni-napoletana.jpeg";
 
 // Signature Alla Pala Pizza
 import AllaPalaMargheritaImage from "../assets/menu/alla-pala-margherita.jpeg";
@@ -82,7 +82,6 @@ import ParmesanFriesImage from "../assets/menu/parmesan-fries.jpeg";
 
 // Dessert
 import TiramisuClassicoImage from "../assets/menu/tiramisu-classico.jpeg";
-import TiramisuSignatureImage from "../assets/menu/tiramisu-signature.jpeg";
 import ChocolateMousseImage from "../assets/menu/chocolate-mousse.jpeg";
 
 export const MENU_ITEMS: MenuItem[] = [

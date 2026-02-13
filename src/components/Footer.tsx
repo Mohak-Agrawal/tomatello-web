@@ -111,3 +111,9 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
+
+
+https://www.swiggy.com/city/delhi/tomatello-cucina-italiana-leela-ram-market-south-extension-rest981158
+https://www.zomato.com/ncr/tomatello-cucina-italiana-south-extension-2-new-delhi
+https://www.instagram.com/tomatello.it/
+https://wa.me/918076823024?text=Hello%20Tomatello,%20I%20would%20like%20to%20place%20an%20order.

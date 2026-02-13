@@ -3,6 +3,7 @@ import SectionHeader from "./SectionHeader";
 import MenuItemCard from "./MenuItemCard";
 import { MENU_CATEGORIES, MENU_ITEMS } from "../data/menuItems";
 import type { MenuItem } from "../types/menu";
+import { Search, X } from "lucide-react";
 
 interface MenuSectionProps {
   addToCart: (item: MenuItem) => void;
@@ -16,23 +17,63 @@ const MenuSection: React.FC<MenuSectionProps> = ({
   updateQuantity,
 }) => {
   const [filter, setFilter] = useState<string>("All");
+  const [search, setSearch] = useState<string>("");
 
-  const filteredMenu = MENU_ITEMS.filter(
-    (item) => filter === "All" || item.category === filter,
-  );
+  const filteredMenu = MENU_ITEMS.filter((item) => {
+    const matchesCategory = filter === "All" || item.category === filter;
+
+    const matchesSearch =
+      item.name.toLowerCase().includes(search.toLowerCase()) ||
+      item.description?.toLowerCase().includes(search.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <section id="menu" className="pb-4 md:pt-32">
       <div className="max-w-6xl mx-auto px-4">
-        <SectionHeader
-          title=" Menu"
-          // subtitle="A seasonal selection of pizzas, pastas, and traditional Italian classics. Click 'Add to Cart' to begin your order."
-        />
+        <SectionHeader title="Menu" />
+
+        {/* Search Bar */}
+        <div className="mt-12 mb-16 flex flex-col items-center">
+          <div className="relative w-full max-w-lg">
+            <div className="flex items-center bg-white/70 backdrop-blur-sm border border-neutral-200 rounded-full px-6 py-4 shadow-sm transition-all duration-300 focus-within:shadow-md focus-within:scale-[1.01]">
+              {/* Icon */}
+              <Search size={18} className="text-neutral-400 mr-3" />
+
+              {/* Input */}
+              <input
+                type="text"
+                placeholder="Search by dish..."
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+                className="w-full bg-transparent outline-none text-sm tracking-wide placeholder:text-neutral-400"
+              />
+
+              {/* Clear Button */}
+              {search && (
+                <button
+                  onClick={() => setSearch("")}
+                  className="ml-3 text-neutral-400 hover:text-neutral-600 transition"
+                >
+                  <X size={16} />
+                </button>
+              )}
+            </div>
+          </div>
+
+          {/* Result Count */}
+          {search && (
+            <p className="text-xs text-neutral-500 mt-4 tracking-wide">
+              {filteredMenu.length} result{filteredMenu.length !== 1 && "s"}{" "}
+              found
+            </p>
+          )}
+        </div>
 
         {/* Category Filter */}
-        <div className=" mb-14">
+        <div className="mb-14">
           <div className="flex flex-wrap gap-x-10 gap-y-6 justify-center">
-            {/* All */}
             <button
               onClick={() => setFilter("All")}
               className={`relative text-xs tracking-[0.2em] uppercase transition-all duration-300 ${
@@ -85,7 +126,7 @@ const MenuSection: React.FC<MenuSectionProps> = ({
 
         {filteredMenu.length === 0 && (
           <p className="text-center text-base italic text-gray-500 mt-8">
-            No items in this category.
+            No matching dishes found.
           </p>
         )}
       </div>
