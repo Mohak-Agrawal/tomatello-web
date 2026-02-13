@@ -35,7 +35,7 @@ import MargheritaNapoletanaImage from "../assets/menu/margherita-napoletana.jpeg
 import BurrataEPomodoroImage from "../assets/menu/burrata-e-pomodoro.jpeg";
 import DiavoloDiPolloImage from "../assets/menu/diavolo-di-pollo.jpeg";
 import QuattroFormaggiImage from "../assets/menu/quattro-formaggi.jpeg";
-import MargherinaraPestoNapoletanaImage from "../assets/menu/margherita-napoletana.jpeg";
+import MargherinaraPestoNapoletanaImage from "../assets/menu/margherinara-pesto.jpeg";
 import NapoliTruffleFungiNapoletanaImage from "../assets/menu//margherita-napoletana.jpeg";
 import ClassicPepperoniNapoletanaPizzaImage from "../assets/menu/margherita-napoletana.jpeg";
 
@@ -43,10 +43,19 @@ import ClassicPepperoniNapoletanaPizzaImage from "../assets/menu/margherita-napo
 import AllaPalaMargheritaImage from "../assets/menu/alla-pala-margherita.jpeg";
 import AllaPalaFunghiImage from "../assets/menu/alla-pala-funghi.jpeg";
 import AllaPalaPestoImage from "../assets/menu/alla-pala-pesto.jpeg";
+import AllaPalaQuattroFormaggiImage from "../assets/menu/alla-pala-quattro-formaggi.jpeg";
 import AllaPalaPepperoniImage from "../assets/menu/alla-pala-pepperoni.jpeg";
+import AllaPalaChickenPepperoniImage from "../assets/menu/alla-pala-chicken-pepporoni.jpg";
+import AllaPalaProsciuttoImage from "../assets/menu/alla-pala-prosciutto.png";
 
 //Pasta
-import ArrabiataImage from "../assets/menu/Arrabiata.jpeg";
+import ArrabiataImage from "../assets/menu/penne-arrabiata.jpeg";
+import AglioEOlioImage from "../assets/menu/aglio-e-olio.png";
+import FettucciniAlfredoImage from "../assets/menu/fettuchini-alfredo.png";
+import FusilliPestoImage from "../assets/menu/fusili-pesto.jpeg";
+import RigatoniRosaImage from "../assets/menu/rose-rigatoni.jpeg";
+import RavioliChickenImage from "../assets/menu/ravioli-chicken.png";
+import FettuccineLambShankImage from "../assets/menu/fettuccine-lamb-shank.png";
 
 // Chef’s Signature Pasta & Risotti
 import CacioEPepeImage from "../assets/menu/cacio-e-pepe.jpeg";
@@ -62,6 +71,7 @@ import TaglioliniTruffleImage from "../assets/menu/tagliolini-truffle.jpeg";
 // Mains
 import ChickenMilaneseImage from "../assets/menu/chicken-milanese.jpeg";
 import GnocchiAllaSorrentinaImage from "../assets/menu/gnocchi-alla-sorrentina.jpeg";
+import MelanzanaAllaParmigianaImage from "../assets/menu/melanzana-alla-parmigiana.jpeg";
 
 // Salads
 import CaesarSaladImage from "../assets/menu/caesar-salad.jpeg";
@@ -178,7 +188,6 @@ export const MENU_ITEMS: MenuItem[] = [
     category: "Antipasti & Small Plates",
     imageUrl: MushroomAranciniImage,
   },
-
   {
     id: 10,
     name: "Lamb Arancini",
@@ -365,7 +374,7 @@ export const MENU_ITEMS: MenuItem[] = [
     imageAlt: "Pizza Alla Pala Quattro Formaggi",
     tags: ["Vegetarian"],
     category: "Signature Alla Pala Pizza",
-    imageUrl: AllaPalaMargheritaImage,
+    imageUrl: AllaPalaQuattroFormaggiImage,
   },
   {
     id: 27,
@@ -387,7 +396,7 @@ export const MENU_ITEMS: MenuItem[] = [
     imageAlt: "Pizza Alla Pala Al Chicken Pepperoni",
     tags: ["Meat"],
     category: "Signature Alla Pala Pizza",
-    imageUrl: AllaPalaPepperoniImage,
+    imageUrl: AllaPalaChickenPepperoniImage,
   },
   {
     id: 29,
@@ -398,7 +407,7 @@ export const MENU_ITEMS: MenuItem[] = [
     imageAlt: "Goat Cheese & Prosciutto Pizza Alla Pala",
     tags: ["Meat"],
     category: "Signature Alla Pala Pizza",
-    imageUrl: AllaPalaMargheritaImage,
+    imageUrl: AllaPalaProsciuttoImage,
   },
 
   // ---------------- Pasta ----------------
@@ -416,14 +425,14 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 31,
-    name: " Spaghetti Aglio E Olio ",
+    name: "Spaghetti Aglio E Olio",
     description:
       " Classic Italian pasta, made with garlic, olive oil, and a touch of chilli for subtle heat.",
     price: "₹549",
     imageAlt: "Spaghetti Aglio E Olio",
     tags: ["Pasta", "Classic"],
     category: "Pasta",
-    imageUrl: ArrabiataImage,
+    imageUrl: AglioEOlioImage,
   },
   {
     id: 32,
@@ -434,7 +443,7 @@ export const MENU_ITEMS: MenuItem[] = [
     imageAlt: " Fettuccini Alfredo",
     tags: ["Pasta", "Classic"],
     category: "Pasta",
-    imageUrl: ArrabiataImage,
+    imageUrl: FettucciniAlfredoImage,
   },
   {
     id: 33,
@@ -445,7 +454,7 @@ export const MENU_ITEMS: MenuItem[] = [
     imageAlt: " Fusilli Pesto Genovese ",
     tags: ["Pasta", "Classic"],
     category: "Pasta",
-    imageUrl: ArrabiataImage,
+    imageUrl: FusilliPestoImage,
   },
   {
     id: 34,
@@ -456,7 +465,7 @@ export const MENU_ITEMS: MenuItem[] = [
     imageAlt: " Rigatoni Rosa ",
     tags: ["Pasta", "Classic"],
     category: "Pasta",
-    imageUrl: ArrabiataImage,
+    imageUrl: RigatoniRosaImage,
   },
   {
     id: 35,
@@ -467,7 +476,7 @@ export const MENU_ITEMS: MenuItem[] = [
     imageAlt: " Ravioli Chicken With Rustic Contadina Sauce ",
     tags: ["Pasta", "Classic"],
     category: "Pasta",
-    imageUrl: ArrabiataImage,
+    imageUrl: RavioliChickenImage,
   },
   {
     id: 36,
@@ -478,7 +487,7 @@ export const MENU_ITEMS: MenuItem[] = [
     imageAlt: " Fettuccine Lamb Shank ",
     tags: ["Pasta", "Classic"],
     category: "Pasta",
-    imageUrl: ArrabiataImage,
+    imageUrl: FettuccineLambShankImage,
   },
 
   // ---------------- Chef’s Signature Pasta & Risotti ----------------
@@ -490,7 +499,7 @@ export const MENU_ITEMS: MenuItem[] = [
     price: "₹899",
     imageAlt: "Cacio e Pepe pasta",
     tags: ["Pasta", "Classic"],
-    category: "Cacio e Pepe",
+    category: "Chef’s Signature Pasta & Risotti",
     imageUrl: CacioEPepeImage,
   },
   {
@@ -607,7 +616,7 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 48,
-    name: " Gnocchi alla Puttanesca (add on anchovies)",
+    name: "Gnocchi alla Puttanesca (add on anchovies)",
     description:
       " Soft potato gnocchi tossed in a bold, spicy Neapolitan tomato sauce with olives, capers, garlic, chilli, and oregano.",
     price: "₹690",
@@ -618,14 +627,14 @@ export const MENU_ITEMS: MenuItem[] = [
   },
   {
     id: 49,
-    name: " Melanzana Alla Parmigiana",
+    name: "Melanzana Alla Parmigiana",
     description:
       " Layers of pan fried eggplant baked with a san marzano tomato sauce, basil and a blend of parmigiano reggiano and Mozzarella.",
     price: "₹790",
     imageAlt: " Melanzana Alla Parmigiana ",
     tags: ["Vegetarian"],
     category: "Mains",
-    imageUrl: GnocchiAllaSorrentinaImage,
+    imageUrl: MelanzanaAllaParmigianaImage,
   },
   // ---------------- Salads ----------------
   {
