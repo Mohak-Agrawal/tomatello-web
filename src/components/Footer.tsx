@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
 
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="#"
+                href="https://www.swiggy.com/city/delhi/tomatello-cucina-italiana-leela-ram-market-south-extension-rest981158"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity transition-colors"
@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-                href="#"
+                href="https://www.zomato.com/ncr/tomatello-cucina-italiana-south-extension-2-new-delhi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity transition-colors"
@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
 
             <div className="flex flex-col gap-3 text-sm">
               <a
-                href="#"
+                href="https://www.instagram.com/tomatello.it/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity transition-colors"
@@ -64,16 +64,7 @@ const Footer: React.FC = () => {
               </a>
 
               <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:opacity-70 transition-opacity transition-colors"
-              >
-                Facebook
-              </a>
-
-              <a
-                href="#"
+                href="https://wa.me/918076823024?text=Hello%20Tomatello,%20I%20would%20like%20to%20place%20an%20order."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:opacity-70 transition-opacity transition-colors"
@@ -111,9 +102,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-
-
-https://www.swiggy.com/city/delhi/tomatello-cucina-italiana-leela-ram-market-south-extension-rest981158
-https://www.zomato.com/ncr/tomatello-cucina-italiana-south-extension-2-new-delhi
-https://www.instagram.com/tomatello.it/
-https://wa.me/918076823024?text=Hello%20Tomatello,%20I%20would%20like%20to%20place%20an%20order.
